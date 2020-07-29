@@ -1,0 +1,21 @@
+ext {
+    android = [
+            applicationId: "com.maple.bugly",
+            compileSdkVersion: 30,
+            buildToolsVersion: "30.0.0",
+            minSdkVersion    : 21,
+            targetSdkVersion : 30,
+            versionCode      : 100,
+            versionName      : "1.0.0"
+    ]
+
+    version = [
+
+    ]
+
+
+    dependencies = [
+
+    ]
+
+}

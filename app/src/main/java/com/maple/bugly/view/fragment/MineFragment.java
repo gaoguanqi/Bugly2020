@@ -22,14 +22,16 @@ import com.maple.bugly.app.base.BaseFragment;
 import com.maple.bugly.utils.GlideEngine;
 import com.maple.bugly.utils.PermissionUtils;
 import com.maple.bugly.utils.RequestPermission;
+import com.maple.bugly.view.activity.AboutActivity;
 import com.tbruyelle.rxpermissions2.RxPermissions;
+import com.tencent.bugly.crashreport.inner.InnerApi;
 
 import java.util.List;
 
 public class MineFragment extends BaseFragment{
 
     private ImageView ivImg;
-    private Button btnPicture;
+    private Button btnPicture,btnAbout;
 
     private RxPermissions rxPermissions;
 
@@ -50,6 +52,7 @@ public class MineFragment extends BaseFragment{
         super.onViewCreated(view, savedInstanceState);
         ivImg = view.findViewById(R.id.iv_img);
         btnPicture = view.findViewById(R.id.btn_picture);
+        btnAbout = view.findViewById(R.id.btn_about);
         rxPermissions = new RxPermissions(requireActivity());
 
         btnPicture.setOnClickListener(new View.OnClickListener() {
@@ -71,6 +74,12 @@ public class MineFragment extends BaseFragment{
 
                     }
                 },rxPermissions);
+            }
+        });
+        btnAbout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(requireActivity(), AboutActivity.class));
             }
         });
     }

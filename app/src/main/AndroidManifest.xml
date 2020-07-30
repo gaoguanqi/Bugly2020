@@ -31,6 +31,8 @@
         </activity>
         <activity android:name=".view.activity.HomeActivity"
             android:launchMode="singleTask"/>
+
+        <activity android:name=".view.activity.AboutActivity"/>
         <!-- Bugly升级SDK配置开始  -->
         <activity
             android:name="com.tencent.bugly.beta.ui.BetaActivity"

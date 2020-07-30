@@ -16,4 +16,11 @@
         <item name="android:windowBackground">@drawable/layer_splash_bg</item>
         <item name="android:windowFullscreen">true</item>
     </style>
+
+    <style name="style_menu_active">
+        <item name="android:textSize">12sp</item>
+    </style>
+    <style name="style_menu_inactive">
+        <item name="android:textSize">12sp</item>
+    </style>
 </resources>

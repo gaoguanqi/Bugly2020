@@ -10,6 +10,9 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/> <!-- <uses-permission android:name="android.permission.GET_TASKS" /> -->
     <!--Bugly升级SDK权限配置结束-->
 
+    <uses-permission android:name="android.permission.CAMERA" />
+
+
     <application
         android:name="com.maple.bugly.app.SampleApplication"
         android:allowBackup="true"

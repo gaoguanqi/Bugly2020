@@ -9,9 +9,10 @@ buildscript {
         maven{ url 'https://maven.aliyun.com/repository/releases'}
         maven { url 'http://oss.jfrog.org/artifactory/oss-snapshot-local/' }
 //        google()
-//        jcenter()
+        jcenter()
     }
     dependencies {
+        //2020-07-30 bugly 目前不支持4.0,  降级处理
         classpath "com.android.tools.build:gradle:3.4.1"
         // tinkersupport插件(1.0.3以上无须再配置tinker插件）
         classpath "com.tencent.bugly:tinker-support:1.2.0"
@@ -30,8 +31,9 @@ allprojects {
         maven { url "https://jitpack.io" }
         maven{ url 'https://maven.aliyun.com/repository/releases'}
         maven { url 'http://oss.jfrog.org/artifactory/oss-snapshot-local/' }
-//        google()
-//        jcenter()
+        maven { url "https://maven.goole.com" }
+        maven { url "http://oss.jfrog.org/artifactory/oss-snapshot-local/" }
+        maven { url "https://dl.google.com/dl/android/maven2/" }
     }
 }
 

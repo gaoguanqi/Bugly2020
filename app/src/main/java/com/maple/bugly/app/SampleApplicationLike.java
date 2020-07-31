@@ -9,8 +9,12 @@ import androidx.multidex.MultiDex;
 import android.widget.Toast;
 
 //import com.meituan.android.walle.WalleChannelReader;
+import com.blankj.utilcode.util.ToastUtils;
 import com.blankj.utilcode.util.Utils;
 import com.maple.bugly.R;
+import com.maple.bugly.utils.LogUtils;
+import com.meituan.android.walle.ChannelInfo;
+import com.meituan.android.walle.WalleChannelReader;
 import com.scwang.smart.refresh.footer.ClassicsFooter;
 import com.scwang.smart.refresh.header.ClassicsHeader;
 import com.scwang.smart.refresh.layout.SmartRefreshLayout;
@@ -25,6 +29,7 @@ import com.tencent.bugly.beta.interfaces.BetaPatchListener;
 import com.tencent.tinker.entry.DefaultApplicationLike;
 
 import java.util.Locale;
+import java.util.Map;
 
 /**
  * 自定义ApplicationLike类.
@@ -148,6 +153,14 @@ public class SampleApplicationLike extends DefaultApplicationLike {
 
     private void initSDK() {
         Utils.init(getApplication());
+
+        String channel = WalleChannelReader.getChannel(getApplication());
+        ChannelInfo channelInfo = WalleChannelReader.getChannelInfo(getApplication());
+        Map<String, String> info = channelInfo.getExtraInfo();
+        LogUtils.logGGQ("channel:" +channel + "---info:" + info);
+        ToastUtils.showShort(channel + "--"+info.toString());
+
+
     }
 
     @TargetApi(Build.VERSION_CODES.ICE_CREAM_SANDWICH)

@@ -20,6 +20,7 @@ import com.maple.bugly.view.fragment.MainFragment;
 import com.maple.bugly.view.fragment.MineFragment;
 import com.maple.bugly.view.fragment.NoticeFragment;
 
+import java.nio.channels.Channel;
 import java.util.ArrayList;
 import java.util.List;
 
